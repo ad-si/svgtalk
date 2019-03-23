@@ -1,6 +1,6 @@
 # SvgTalk
 
-SVG generator implemented in GNU SmallTalk.
+SVG generator implemented in GNU Smalltalk.
 
 
 ## Usage
