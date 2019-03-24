@@ -1,0 +1,19 @@
+<package>
+  <name>SvgTalk</name>
+
+  <filein>source/Css.st</filein>
+  <filein>source/CssDeclaration.st</filein>
+  <filein>source/CssRule.st</filein>
+  <filein>source/Svg.st</filein>
+  <filein>source/SvgRect.st</filein>
+
+  <test>
+    <sunit>SvgTalkTestSuite</sunit>
+    <filein>tests/SvgTalkTestSuite.st</filein>
+  </test>
+
+  <file>readme.md</file>
+  <file>tests/CssTest.st</file>
+  <file>tests/SvgRectTest.st</file>
+  <file>tests/SvgTalkTestSuite.st</file>
+</package>

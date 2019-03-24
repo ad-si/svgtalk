@@ -1,9 +1,14 @@
-rect := SvgRect origin: 10@10 corner: 400@300.
-
+rect := SvgRect new origin: 10@10 extent: 400@300;
+  style: (OrderedCollection new
+    add: (CssDeclaration key: 'fill' value: 'red');
+    yourself).
 
 cssRuleH1 := CssRule new
   selector: 'h1';
-  declarations: (#('color: green' 'margin-bottom: 2em') asOrderedCollection);
+  declarations: (OrderedCollection new
+    add: (CssDeclaration key: 'color' value: 'green');
+    add: (CssDeclaration key: 'margin-bottom' value: '2em');
+    yourself);
   yourself.
 
 cssRuleH2 := CssRule new
@@ -19,5 +24,6 @@ svg := Svg new
   children: (OrderedCollection new add: rect; yourself);
   style: css;
   yourself.
+
 
 svg printNl.

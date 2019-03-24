@@ -1,13 +1,16 @@
-docs: main.st
+# Alternative: `gst-doc --package SvgTalk | makeinfo --html --output docs`
+docs: source
 	gst-doc \
 		--output-format HTML \
-		--file main.st \
+		--package SvgTalk \
 		--output docs
 
 	mv docs/classes.html docs/index.html
 
-	# Alternative: `gst-doc --file main.st | makeinfo --html --output docs`
-
-
+.PHONY: clean
 clean:
 	-rm -rf docs
+
+.PHONY: test
+test:
+	gst-package --test ./package.xml
