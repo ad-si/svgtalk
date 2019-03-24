@@ -6,11 +6,6 @@ Rectangle subclass: SvgRect [
 
   | style |
 
-  SvgRect class >> new [
-    <category: 'instance creation'>
-    ^super new initialize.
-  ]
-
   SvgRect class >> left: leftNum right: rightNum top: topNum bottom: bottomNum [
     <category: 'instance creation'>
     ^(super left: leftNum right: rightNum top: topNum bottom: bottomNum)
