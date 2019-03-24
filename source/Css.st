@@ -6,7 +6,7 @@ Object subclass: Css [
 
   | rules |
 
-  initalize [
+  initialize [
     <category: 'initialization'>
     rules := OrderedCollection new.
   ]

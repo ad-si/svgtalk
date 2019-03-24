@@ -4,7 +4,7 @@ Object subclass: CssRule [
 
   | selector declarations |
 
-  initalize [
+  initialize [
     <category: 'initialization'>
 
     selector := ''.

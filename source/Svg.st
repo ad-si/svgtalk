@@ -4,7 +4,7 @@ Object subclass: Svg [
 
   | children style |
 
-  initalize [
+  initialize [
     <category: 'initialization'>
     children := OrderedCollection new.
     style := Css new.

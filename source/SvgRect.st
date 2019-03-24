@@ -20,7 +20,7 @@ Rectangle subclass: SvgRect [
 
   SvgRect class >> origin: originPoint extent: extentPoint [
     <category: 'instance creation'>
-    ^(super origin: originPoint extent: extentPoint) initalize.
+    ^(super origin: originPoint extent: extentPoint) initialize.
   ]
 
   SvgRect class >> origin: originPoint corner: cornerPoint [
@@ -28,7 +28,7 @@ Rectangle subclass: SvgRect [
     ^(super origin: originPoint corner: cornerPoint) initialize.
   ]
 
-  initalize [
+  initialize [
     <category: 'initialization'>
     style := OrderedCollection new.
   ]

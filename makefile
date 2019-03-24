@@ -1,5 +1,5 @@
 # Alternative: `gst-doc --package SvgTalk | makeinfo --html --output docs`
-docs: source
+docs: source/*
 	gst-doc \
 		--output-format HTML \
 		--package SvgTalk \

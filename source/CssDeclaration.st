@@ -12,7 +12,7 @@ Object subclass: CssDeclaration [
       yourself.
   ]
 
-  initalize [
+  initialize [
     <category: 'initialization'>
     key := ''.
     value := ''.
