@@ -10,6 +10,14 @@ circle := SvgCircle new
     add: (CssDeclaration key: 'fill' value: 'green');
     yourself).
 
+ellipse := SvgEllipse new
+  center: 70@80;
+  radiusX: 20;
+  radiusY: 10;
+  style: (OrderedCollection new
+    add: (CssDeclaration key: 'fill' value: 'blue');
+    yourself).
+
 cssRuleH1 := CssRule new
   selector: 'h1';
   declarations: (OrderedCollection new
@@ -28,7 +36,11 @@ css := Css new
 
 
 svg := Svg new
-  children: (OrderedCollection new add: rect; add: circle; yourself);
+  children: (OrderedCollection new
+    add: rect;
+    add: circle;
+    add: ellipse;
+    yourself);
   style: css;
   yourself.
 

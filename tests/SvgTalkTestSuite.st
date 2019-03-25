@@ -2,6 +2,7 @@ PackageLoader fileInPackage: 'SUnit'.
 FileStream fileIn: 'tests/CssTest.st'.
 FileStream fileIn: 'tests/SvgRectTest.st'.
 FileStream fileIn: 'tests/SvgCircleTest.st'.
+FileStream fileIn: 'tests/SvgEllipseTest.st'.
 
 TestSuite subclass: SvgTalkTestSuite [
   SvgTalkTestSuite class >> suite [
@@ -14,6 +15,8 @@ TestSuite subclass: SvgTalkTestSuite [
     self addTest: (SvgRectTest selector: #testSupportForStyles).
 
     self addTest: (SvgCircleTest selector: #testSupportForStyles).
+
+    self addTest: (SvgEllipseTest selector: #testSupportForStyles).
 
     self addTest: (CssTest selector: #testInstantiation).
   ]
