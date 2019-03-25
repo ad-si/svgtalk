@@ -7,6 +7,9 @@ docs: source/*
 
 	mv docs/classes.html docs/index.html
 
+graphic.svg: graphic.st
+	gst source/*.st $< > $@
+
 .PHONY: clean
 clean:
 	-rm -rf docs

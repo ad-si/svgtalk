@@ -3,6 +3,13 @@ rect := SvgRect new origin: 10@10 extent: 400@300;
     add: (CssDeclaration key: 'fill' value: 'red');
     yourself).
 
+circle := SvgCircle new
+  center: 50@60;
+  radius: 20;
+  style: (OrderedCollection new
+    add: (CssDeclaration key: 'fill' value: 'green');
+    yourself).
+
 cssRuleH1 := CssRule new
   selector: 'h1';
   declarations: (OrderedCollection new
@@ -21,7 +28,7 @@ css := Css new
 
 
 svg := Svg new
-  children: (OrderedCollection new add: rect; yourself);
+  children: (OrderedCollection new add: rect; add: circle; yourself);
   style: css;
   yourself.
 

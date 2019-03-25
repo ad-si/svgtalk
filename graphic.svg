@@ -2,4 +2,4 @@
 color: green;margin-bottom: 2em;}
 h2 {
 color: redmargin-bottom: 1em}
-</style><rect x="10" y="10" width="400" height="300" style="fill: red;" /></svg>
+</style><rect x="10" y="10" width="400" height="300" style="fill: red;" /><circle cx="50" cy="60" r="20" style="fill: green;" /></svg>
