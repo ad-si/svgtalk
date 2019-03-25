@@ -4,7 +4,7 @@ SVG generator implemented in [GNU Smalltalk].
 Only contains a few primitives yet.
 Merge requests to support more elements are very welcome.
 
-Check out the documentation at https://svgtalk.ad-si.com.
+Check out the documentation at https://ad-si.github.io/svgtalk/.
 
 Attention: Must be run with [GNU Smalltalk] version [3.2.91].
 
@@ -37,6 +37,8 @@ Start repl and create objects:
 gst
 st> SvgRect new origin: 1@2 extent: 30@40.
 ```
+
+For more detailed usage scenarios check out the [./tests] directory.
 
 
 ## Run Tests
