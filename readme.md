@@ -1,12 +1,12 @@
 # SvgTalk
 
-SVG generator implemented in GNU Smalltalk.
+SVG generator implemented in [GNU Smalltalk].
 Only contains a few primitives yet.
 Merge requests to support more elements are very welcome.
 
 Check out the documentation at https://svgtalk.ad-si.com.
 
-Attention: Must be run with GNU Smalltalk version 3.2.91.
+Attention: Must be run with [GNU Smalltalk] version [3.2.91].
 
 
 ## Usage
@@ -51,3 +51,6 @@ gst-package --test ./package.xml
 ```sh
 make docs
 ```
+
+[GNU Smalltalk]: http://smalltalk.gnu.org
+[3.2.91]: http://smalltalk.gnu.org/news/gnu-smalltalk-3-2-91

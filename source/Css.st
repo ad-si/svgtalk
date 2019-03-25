@@ -1,28 +1,41 @@
 FileStream fileIn: './source/CssRule.st'.
 
 Object subclass: Css [
+  "I represent a Cascading Style Sheet"
   <category: 'Graphics'>
-  <comment: 'I represent a Cascading Style Sheet'>
 
   | rules |
 
   initialize [
+    "Answer an empty Css instance"
     <category: 'initialization'>
     rules := OrderedCollection new.
   ]
 
-  rules: aCollection [ rules := aCollection. ]
-  isEmpty [ ^rules isEmpty. ]
+  rules: aCollection [
+    "Set the CSS rules"
+    <category: 'accessing'>
+    rules := aCollection.
+  ]
+
+  isEmpty [
+    "Check if Css instance does not contain any rules"
+    <category: 'accessing'>
+    ^rules isEmpty.
+  ]
 
   asString [
+    "Answer CSS string representation"
+    <category: 'accessing'>
     ^rules
       inject: ''
       into: [:result :rule |
         result, rule asString, Character nl asString]
   ]
 
-  printOn: stream [
+  printOn: aStream [
+    "Print the string representation of the receiver on aStream"
     <category: 'printing'>
-    stream nextPutAll: self asString.
+    aStream nextPutAll: self asString.
   ]
 ]

@@ -1,23 +1,41 @@
 FileStream fileIn: './source/CssDeclaration.st'.
 
 Object subclass: SvgCircle [
+  "I represent an SVG circle"
   <category: 'Graphics'>
-  <comment: 'I represent an SVG circle'>
 
   | center radius style |
 
   initialize [
+    ""
     <category: 'initialization'>
     center := 0@0.
     radius := 1.
     style := OrderedCollection new.
   ]
 
-  center: aPoint [ center := aPoint. ]
-  radius: aNumber [ radius := aNumber. ]
-  style: aCollection [ style := aCollection. ]
+  center: aPoint [
+    ""
+    <category: 'accessing'>
+    center := aPoint.
+  ]
+
+  radius: aNumber [
+    ""
+    <category: 'accessing'>
+    radius := aNumber.
+  ]
+
+  style: aCollection [
+    ""
+    <category: 'accessing'>
+    style := aCollection.
+  ]
 
   asString [
+    ""
+    <category: 'accessing'>
+
     ^'<circle ',
       'cx="', center x asString, '" ',
       'cy="', center y asString, '" ',

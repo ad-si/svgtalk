@@ -1,21 +1,34 @@
 FileStream fileIn: './source/CssDeclaration.st'.
 
 Object subclass: SvgPolyline [
+  "I represent an SVG polyline"
   <category: 'Graphics'>
-  <comment: 'I represent an SVG line'>
 
   | points style |
 
   initialize [
+    ""
     <category: 'initialization'>
     style := OrderedCollection new.
     points := OrderedCollection new.
   ]
 
-  style: aCollection [ style := aCollection. ]
-  points: aCollection [ points := aCollection. ]
+  style: aCollection [
+    ""
+    <category: 'accessing'>
+    style := aCollection.
+  ]
+
+  points: aCollection [
+    ""
+    <category: 'accessing'>
+    points := aCollection.
+  ]
 
   asString [
+    ""
+    <category: 'accessing'>
+
     ^'<polyline ',
       'points="', (points
         inject: ''

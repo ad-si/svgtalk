@@ -1,12 +1,13 @@
 FileStream fileIn: './source/CssDeclaration.st'.
 
 Object subclass: SvgEllipse [
+  "I represent an SVG circle"
   <category: 'Graphics'>
-  <comment: 'I represent an SVG circle'>
 
   | center radiusX radiusY style |
 
   initialize [
+    ""
     <category: 'initialization'>
     center := 0@0.
     radiusX := 1.
@@ -14,12 +15,34 @@ Object subclass: SvgEllipse [
     style := OrderedCollection new.
   ]
 
-  center: aPoint [ center := aPoint. ]
-  radiusX: aNumber [ radiusX := aNumber. ]
-  radiusY: aNumber [ radiusY := aNumber. ]
-  style: aCollection [ style := aCollection. ]
+  center: aPoint [
+    ""
+    <category: 'accessing'>
+    center := aPoint.
+  ]
+
+  radiusX: aNumber [
+    ""
+    <category: 'accessing'>
+    radiusX := aNumber.
+  ]
+
+  radiusY: aNumber [
+    ""
+    <category: 'accessing'>
+    radiusY := aNumber.
+  ]
+
+  style: aCollection [
+    ""
+    <category: 'accessing'>
+    style := aCollection.
+  ]
 
   asString [
+    ""
+    <category: 'accessing'>
+
     ^'<ellipse ',
       'cx="', center x asString, '" ',
       'cy="', center y asString, '" ',

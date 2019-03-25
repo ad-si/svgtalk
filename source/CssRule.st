@@ -1,20 +1,31 @@
 Object subclass: CssRule [
+  "I represent a rule of a Cascading Style Sheet"
   <category: 'Graphics'>
-  <comment: 'I represent a rule of a Cascading Style Sheet'>
 
   | selector declarations |
 
   initialize [
+    ""
     <category: 'initialization'>
-
     selector := ''.
     declarations := OrderedCollection new.
   ]
 
-  selector: aSelector [ selector := aSelector. ]
-  declarations: aCollection [ declarations := aCollection. ]
+  selector: aSelector [
+    ""
+    <category: 'accessing'>
+    selector := aSelector.
+  ]
+
+  declarations: aCollection [
+    ""
+    <category: 'accessing'>
+    declarations := aCollection.
+  ]
 
   asString [
+    "Answer CSS string representation of receiver"
+    <category: 'accessing'>
     ^selector asString, ' {', Character nl asString,
     (declarations
       inject: ''
@@ -22,9 +33,9 @@ Object subclass: CssRule [
     '}'.
   ]
 
-  printOn: stream [
+  printOn: aStream [
+    "Print the string representation of the receiver on aStream"
     <category: 'printing'>
-
-    stream nextPutAll: self asString.
+    aStream nextPutAll: self asString.
   ]
 ]
