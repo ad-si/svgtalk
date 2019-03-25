@@ -6,6 +6,7 @@ FileStream fileIn: 'tests/SvgEllipseTest.st'.
 FileStream fileIn: 'tests/SvgLineTest.st'.
 FileStream fileIn: 'tests/SvgPolylineTest.st'.
 FileStream fileIn: 'tests/SvgPolygonTest.st'.
+FileStream fileIn: 'tests/SvgPathTest.st'.
 
 TestSuite subclass: SvgTalkTestSuite [
   SvgTalkTestSuite class >> suite [
@@ -26,6 +27,8 @@ TestSuite subclass: SvgTalkTestSuite [
     self addTest: (SvgPolylineTest selector: #testSupportForStyles).
 
     self addTest: (SvgPolygonTest selector: #testSupportForStyles).
+
+    self addTest: (SvgPathTest selector: #testSupportForStyles).
 
     self addTest: (CssTest selector: #testInstantiation).
   ]
