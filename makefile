@@ -1,3 +1,6 @@
+.PHONY: all
+all: docs graphic.svg
+
 # Alternative: `gst-doc --package SvgTalk | makeinfo --html --output docs`
 docs: source/* package.xml
 	gst-package ./package.xml
