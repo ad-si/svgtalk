@@ -18,8 +18,8 @@ Object subclass: SvgCircle [
     ""
     <category: 'initialization'>
     ^(super new) initialize
-      center: 1@2;
-      radius: 3.
+      center: aPoint;
+      radius: aNumber.
   ]
 
   center: aPoint [
