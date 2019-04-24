@@ -5,9 +5,7 @@ FileStream fileIn: './source/CssDeclaration.st'.
 TestCase subclass: SvgCircleTest [
   testSupportForStyles [
     | circle expected |
-    circle := SvgCircle new
-      center: 1@2;
-      radius: 3;
+    circle := (SvgCircle center: 1@2 radius: 3)
       style: (OrderedCollection new
         add: (CssDeclaration key: 'fill' value: 'red');
         add: (CssDeclaration key: 'stroke' value: 'green');

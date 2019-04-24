@@ -12,7 +12,7 @@ TestCase subclass: SvgRectTest [
 
   testSupportForStyles [
     | rect expected |
-    rect := SvgRect new origin: 1@2 extent: 30@40;
+    rect := (SvgRect origin: 1@2 extent: 30@40)
       style: (OrderedCollection new
         add: (CssDeclaration key: 'fill' value: 'red');
         add: (CssDeclaration key: 'stroke' value: 'green');

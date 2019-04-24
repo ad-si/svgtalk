@@ -56,3 +56,9 @@ make docs
 
 [GNU Smalltalk]: http://smalltalk.gnu.org
 [3.2.91]: http://smalltalk.gnu.org/news/gnu-smalltalk-3-2-91
+
+
+## TODO
+
+- [ ] Implement `#asString` in terms of `#printOn`
+    (https://stackoverflow.com/questions/55322402)

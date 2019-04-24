@@ -14,6 +14,14 @@ Object subclass: SvgCircle [
     style := OrderedCollection new.
   ]
 
+  SvgCircle class >> center: aPoint radius: aNumber [
+    ""
+    <category: 'initialization'>
+    ^(super new) initialize
+      center: 1@2;
+      radius: 3.
+  ]
+
   center: aPoint [
     ""
     <category: 'accessing'>

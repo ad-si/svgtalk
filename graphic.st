@@ -1,17 +1,14 @@
-background := SvgRect new origin: 0@0 extent: 200@100;
+background := (SvgRect origin: 0@0 extent: 200@100)
   style: (OrderedCollection new
     add: (CssDeclaration key: 'fill' value: 'lightgray');
     yourself).
 
-rect := SvgRect new origin: 30@10 extent: 40@30;
+rect := (SvgRect origin: 30@10 extent: 40@30)
   style: (OrderedCollection new
     add: (CssDeclaration key: 'fill' value: 'red');
     yourself).
 
-circle := SvgCircle new
-  center: 100@20;
-  radius: 10;
-  yourself.
+circle := SvgCircle center: 100@20 radius: 10.
 
 ellipse := SvgEllipse new
   center: 140@20;
